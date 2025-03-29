@@ -49,10 +49,10 @@ scene.add(floor);
 
 const textureLoader = new TextureLoader();
 const modelTexture = {
-  map: textureLoader.load("/textures/Tiles.png"),
-  normalMap: textureLoader.load("/textures/Tiles_NormalGL.jpg"),
-  roughnessMap: textureLoader.load("/textures/Tiles_Roughness.jpg"),
-  displacementMap: textureLoader.load("/textures/Tiles_Displacement.jpg"),
+  map: textureLoader.load("/textures/tiles.png"),
+  normalMap: textureLoader.load("/textures/tiles_normalgl.jpg"),
+  roughnessMap: textureLoader.load("/textures/tiles_roughness.jpg"),
+  displacementMap: textureLoader.load("/textures/tiles_displacement.jpg"),
   aoMap: textureLoader.load("/textures/Tiles.png")
 };
 Object.values(modelTexture).forEach(tex => {
@@ -74,7 +74,7 @@ const modelMaterial = new THREE.MeshStandardMaterial({
 const objLoader = new OBJLoader();
 let model = null, sphereGroup = new THREE.Group(), ring1, ring2, sphere1, sphere2;
 
-objLoader.load("/model.OBJ", (object) => {
+objLoader.load("/model.obj", (object) => {
   object.traverse(child => {
     if (child.isMesh) {
       child.material = modelMaterial;
