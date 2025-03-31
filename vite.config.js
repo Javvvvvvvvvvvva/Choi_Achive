@@ -1,13 +1,14 @@
 import restart from 'vite-plugin-restart'
 
 export default {
-  publicDir: 'static', // Keep it relative to root
+  root: 'src', // Tell Vite your index.html lives here
+  publicDir: '../static',
   build: {
-    outDir: 'dist',     // Stay inside project folder
+    outDir: '../dist', // Output in root-level 'dist'
     emptyOutDir: true,
     sourcemap: true
   },
   plugins: [
-    restart({ restart: ['static/**'] }) // Watch static folder
+    restart({ restart: ['../static/**'] })
   ]
 }
