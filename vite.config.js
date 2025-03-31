@@ -2,14 +2,12 @@ import restart from 'vite-plugin-restart'
 
 // vite.config.js
 export default {
-    publicDir: 'static',
+    root: 'src',
+    publicDir: '../static',
     build: {
-      outDir: 'dist',
+      outDir: '../dist',
       emptyOutDir: true,
       sourcemap: true
-    },
-    plugins: [
-      restart({ restart: ['static/**'] })
-    ]
+    }
   }
   
