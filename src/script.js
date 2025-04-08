@@ -52,7 +52,7 @@ const modelTexture = {
   normalMap: textureLoader.load("/textures/tiles_normalgl.jpg"),
   roughnessMap: textureLoader.load("/textures/tiles_roughness.jpg"),
   displacementMap: textureLoader.load("/textures/tiles_displacement.jpg"),
-  aoMap: textureLoader.load("/textures/Tiles.png")
+  aoMap: textureLoader.load("/textures/tiles.png")
 };
 Object.values(modelTexture).forEach(tex => {
   tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
