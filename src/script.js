@@ -1,7 +1,6 @@
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
-import { OBJLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/OBJLoader.js';
-
-
+import * as THREE from "three";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
+import { TextureLoader } from "three";
 
 const canvas = document.querySelector(".webgl");
 const label1 = document.getElementById("label1");
@@ -50,11 +49,11 @@ scene.add(floor);
 
 const textureLoader = new TextureLoader();
 const modelTexture = {
-  map: textureLoader.load("/textures/Tiles.png"),
+  map: textureLoader.load("/textures/tiles.png"),
   normalMap: textureLoader.load("/textures/Tiles_NormalGL.jpg"),
   roughnessMap: textureLoader.load("/textures/Tiles_Roughness.jpg"),
   displacementMap: textureLoader.load("/textures/Tiles_Displacement.jpg"),
-  aoMap: textureLoader.load("/textures/Tiles.png")
+  aoMap: textureLoader.load("/textures/tiles.png")
 };
 Object.values(modelTexture).forEach(tex => {
   tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
