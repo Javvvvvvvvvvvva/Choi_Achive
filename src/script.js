@@ -46,7 +46,7 @@ floor.position.y = -8;
 floor.receiveShadow = true;
 scene.add(floor);
 
-const textureLoader = new TextureLoader();
+const textureLoader = new THREE.TextureLoader();
 const modelTexture = {
   map: textureLoader.load("/textures/tiles.png"),
   normalMap: textureLoader.load("/textures/tiles_normalgl.jpg"),
