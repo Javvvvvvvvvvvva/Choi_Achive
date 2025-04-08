@@ -1,5 +1,5 @@
-import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
-import { OBJLoader } from 'https://unpkg.com/three@0.160.0/examples/jsm/loaders/OBJLoader.js';
+import * as THREE from 'https://cdn.skypack.dev/three@0.160.0';
+import { OBJLoader } from 'https://cdn.skypack.dev/three@0.160.0/examples/jsm/loaders/OBJLoader.js';
 
 const canvas = document.querySelector(".webgl");
 const label1 = document.getElementById("label1");
