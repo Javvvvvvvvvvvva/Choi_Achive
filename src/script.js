@@ -1,5 +1,6 @@
-import * as THREE from 'https://cdn.skypack.dev/three@0.160.0';
-import { OBJLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/OBJLoader.js';
+import * as THREE from "three";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
+import { TextureLoader } from "three";
 
 const canvas = document.querySelector(".webgl");
 const label1 = document.getElementById("label1");
@@ -46,13 +47,13 @@ floor.position.y = -8;
 floor.receiveShadow = true;
 scene.add(floor);
 
-const textureLoader = new THREE.TextureLoader();
+const textureLoader = new TextureLoader();
 const modelTexture = {
-  map: textureLoader.load("/textures/tiles.png"),
-  normalMap: textureLoader.load("/textures/tiles_normalgl.jpg"),
-  roughnessMap: textureLoader.load("/textures/tiles_roughness.jpg"),
-  displacementMap: textureLoader.load("/textures/tiles_displacement.jpg"),
-  aoMap: textureLoader.load("/textures/tiles.png")
+  map: textureLoader.load("/textures/Tiles.png"),
+  normalMap: textureLoader.load("/textures/Tiles_NormalGL.jpg"),
+  roughnessMap: textureLoader.load("/textures/Tiles_Roughness.jpg"),
+  displacementMap: textureLoader.load("/textures/Tiles_Displacement.jpg"),
+  aoMap: textureLoader.load("/textures/Tiles.png")
 };
 Object.values(modelTexture).forEach(tex => {
   tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
@@ -73,7 +74,7 @@ const modelMaterial = new THREE.MeshStandardMaterial({
 const objLoader = new OBJLoader();
 let model = null, sphereGroup = new THREE.Group(), ring1, ring2, sphere1, sphere2;
 
-objLoader.load("/model.obj", (object) => {
+objLoader.load("/model.OBJ", (object) => {
   object.traverse(child => {
     if (child.isMesh) {
       child.material = modelMaterial;
