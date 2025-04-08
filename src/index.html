@@ -7,21 +7,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css" />
 </head>
-<div id="label1" class="info-label"><br></div>
-<div id="label2" class="info-label"><br></div>
-<header class="sci-header">
-  <div class="sci-title">⛛ CHOI ARCHIVE</div>
-  <nav class="sci-nav">
-    <a href="#" class="nav-link" id="consoleBtn">Console</a>
-  </nav>
-</header>
-<section id="consoleArea" class="console-area hidden">
-  <div class="console-header">
-    Console <button id="closeConsole">✖</button>
-  </div>
-  <pre id="consoleOutput"></pre>
-</section>
 <body>
+  <div id="label1" class="info-label"><br></div>
+  <div id="label2" class="info-label"><br></div>
+
+  <header class="sci-header">
+    <div class="sci-title">⛛ CHOI ARCHIVE</div>
+    <nav class="sci-nav">
+      <a href="#" class="nav-link" id="consoleBtn">Console</a>
+    </nav>
+  </header>
+
+  <section id="consoleArea" class="console-area hidden">
+    <div class="console-header">
+      Console <button id="closeConsole">✖</button>
+    </div>
+    <pre id="consoleOutput"></pre>
+  </section>
+
   <div id="zoomModal" class="zoom-modal">
     <div id="consoleArea" class="console-area hidden">
       <div class="console-header">
@@ -31,21 +34,24 @@
       <div id="consoleOutput"></div>
     </div>
   </div>
+
   <button id="backBtn" class="back-button">Back</button>
+
   <audio id="bgAudio" loop>
     <source src="/audio/ambient.mp3" type="audio/mp3" />
   </audio>
+
   <div id="glitchOverlay"></div>
   <div id="glitchPulse"></div>
-  
+
   <!-- Fullscreen WebGL canvas -->
   <canvas class="webgl"></canvas>
 
   <!-- Floating footer -->
   <footer class="sci-footer">
-⛛ NODE 03 — DIGITAL ARCHIVE | SYNC: 99.9%
+    ⛛ NODE 03 — DIGITAL ARCHIVE | SYNC: 99.9%
   </footer>
-  
+
   <section id="creditSection" class="credit-section">
     <div class="floating-particles"></div>
     <h2>Credits & Acknowledgements</h2>
@@ -56,7 +62,8 @@
     <p>Inspired by: Cyberpunk + Terminal UI aesthetics</p>
   </section>
 
-  <!-- Three.js script -->
+  <!-- Three.js script with proper module support -->
   <script type="module" src="./script.js"></script>
 </body>
 </html>
+
