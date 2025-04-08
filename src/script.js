@@ -1,6 +1,7 @@
-import * as THREE from "three";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
-import { TextureLoader } from "three";
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+import { OBJLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/OBJLoader.js';
+
+
 
 const canvas = document.querySelector(".webgl");
 const label1 = document.getElementById("label1");
