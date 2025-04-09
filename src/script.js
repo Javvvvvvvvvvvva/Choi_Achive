@@ -74,7 +74,7 @@ const modelMaterial = new THREE.MeshStandardMaterial({
 const objLoader = new OBJLoader();
 let model = null, sphereGroup = new THREE.Group(), ring1, ring2, sphere1, sphere2;
 
-objLoader.load("/model.OBJ", (object) => {
+objLoader.load("./model.obj", (object) => {
   object.traverse(child => {
     if (child.isMesh) {
       child.material = modelMaterial;
@@ -212,7 +212,6 @@ let terminalState = {
             terminalInput.removeEventListener("keydown", handleInput);
             setTimeout(() => backBtn.click(), 1000);
           } if (cmd === "clear") {
-            // Remove all previous console lines except the current prompt
             const allLines = output.querySelectorAll(".console-line, .console-prompt, .ascii-art");
             allLines.forEach(line => line.remove());
             addPrompt();
