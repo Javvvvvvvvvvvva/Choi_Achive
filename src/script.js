@@ -50,9 +50,9 @@ scene.add(floor);
 const textureLoader = new TextureLoader();
 const modelTexture = {
   map: textureLoader.load("/textures/tiles.png"),
-  normalMap: textureLoader.load("/textures/Tiles_NormalGL.jpg"),
-  roughnessMap: textureLoader.load("/textures/Tiles_Roughness.jpg"),
-  displacementMap: textureLoader.load("/textures/Tiles_Displacement.jpg"),
+  normalMap: textureLoader.load("/textures/tiles_normalGL.jpg"),
+  roughnessMap: textureLoader.load("/textures/tiles_roughness.jpg"),
+  displacementMap: textureLoader.load("/textures/tiles_displacement.jpg"),
   aoMap: textureLoader.load("/textures/tiles.png")
 };
 Object.values(modelTexture).forEach(tex => {
